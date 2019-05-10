@@ -11,19 +11,23 @@ public class kNNMain{
     // TASK 1: Use command line arguments to point DataSet.readDataSet method to
     // the desired file. Choose a given DataPoint, and print its features and label
 	String theData = args[0];
-	List<DataPoint> breastCancer = DataSet.readDataSet(theData);
+	List<DataPoint> iris1 = DataSet.readDataSet(theData);
+	Datapoint irisPoint = iris1.get(3);
 	
-	DataPoint breastCancerPoint = breastCancer.get(0);
-	double [] values = breastCancerPoint.getX();
-	String printableX = Arrays.toString(values);
-
-	System.out.println(printableX); 
+	double [] values = irisPoint.getX(); 
+	String irisFlower = irisPoint.getLabel();
+	
+	for (int i=0; i<values.length;i++)
+	{ System.out.println(values[i]);
+	}
 
 
     //TASK 2:Use the DataSet class to split the fullDataSet into Training and Held Out Test Dataset
-	List<DataPoint> bCancerTest = DataSet.getTestSet(breastCancer,0.2);
-	List<DataPoint> bCancerTraining = DataSet.getTrainingSet(breastCancer,0.8);
 	
+//DataPoint dp = mylist.get(4);
+	//double [] dpx = dp.getX();
+	//String.printableX = Arrays.toString(dp.getX());
+	//System.out.pritnln(printableX);
 
     // TASK 3: Use the DataSet class methods to plot the 2D data (binary and multi-class)
 
