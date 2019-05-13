@@ -45,7 +45,7 @@ public class kNNMain{
     // point based on nearest neighbors in training set. Calculate accuracy of model.
 		for (int i=0; i<kNeighbor.length; i++) {
 			DataPoint myThing = kNeighbor[i]; 
-			System.out.println (myThing); 
+			System.out.println (myThing.label); 
 		}
 
   }
